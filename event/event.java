@@ -19,7 +19,10 @@ public class event{
 							j--;
 							if(j==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}			
 			for(int k=1;k<index.area.length;k++){
 				for(int i=0;i<index.area.length;i++){
 					if(index.area[i][k]==0){//기준이 0이면 넘어감.
@@ -28,7 +31,9 @@ public class event{
 					if(index.area[i][k]==index.area[i][k-1]){//같으면 합산
 						index.area[i][k-1]*=2;
 						index.area[i][k]=0;
-					}}}
+					}
+				}
+			}
 			for(int k=1;k<index.area.length;k++){//모든 숫자를 0없이 밀착
 				for(int i=0;i<index.area.length;i++){
 					if(index.area[i][k]==0){//기준이 0이면 넘어감.
@@ -42,7 +47,10 @@ public class event{
 							j--;
 							if(j==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 		}else if(KEventHandler.keyi =='d'){ //우
 			for(int k=1;k<index.area.length;k++){//모든 숫자를 0없이 밀착
 				for(int i=0;i<index.area.length;i++){
@@ -57,7 +65,10 @@ public class event{
 							j--;
 							if(j==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 			for(int k=1;k<index.area.length;k++){
 				for(int i=0;i<index.area.length;i++){
 					if(index.area[i][3-k]==0){//기준이 0이면 넘어감.
@@ -66,7 +77,9 @@ public class event{
 					if(index.area[i][3-k]==index.area[i][3-k+1]){//같으면 합산
 						index.area[i][3-k+1]*=2;
 						index.area[i][3-k]=0;
-					}}}
+					}
+				}
+			}
 			for(int k=1;k<index.area.length;k++){//모든 숫자를 0없이 밀착
 				for(int i=0;i<index.area.length;i++){
 					if(index.area[i][3-k]==0){//기준이 0이면 넘어감.
@@ -80,7 +93,10 @@ public class event{
 							j--;
 							if(j==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 		}else if(KEventHandler.keyi =='w'){//위
 			for(int i=1;i<index.area.length;i++){//모든 숫자를 0없이 밀착
 				for(int k=0;k<index.area.length;k++){
@@ -95,7 +111,10 @@ public class event{
 							l--;
 							if(l==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 			for(int i=1;i<index.area.length;i++){
 				for(int k=0;k<index.area.length;k++){
 					if(index.area[i][k]==0){//기준이 0이면 넘어감.
@@ -104,7 +123,9 @@ public class event{
 					if(index.area[i][k]==index.area[i-1][k]){//같으면 합산
 						index.area[i-1][k]*=2;
 						index.area[i][k]=0;
-					}}}
+					}
+				}
+			}
 			for(int i=1;i<index.area.length;i++){//모든 숫자를 0없이 밀착
 				for(int k=0;k<index.area.length;k++){
 					if(index.area[i][k]==0){//기준이 0이면 넘어감.
@@ -118,7 +139,10 @@ public class event{
 							l--;
 							if(l==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 		}else if(KEventHandler.keyi =='s'){//아래
 			for(int i=1;i<index.area.length;i++){//모든 숫자를 0없이 밀착
 				for(int k=0;k<index.area.length;k++){
@@ -133,7 +157,13 @@ public class event{
 							l--;
 							if(l==0)
 								break;
-						}}}}
+						}
+						
+					}
+					
+				}
+				
+			}
 			for(int i=1;i<index.area.length;i++){
 				for(int k=0;k<index.area.length;k++){
 					if(index.area[3-i][k]==0){//기준이 0이면 넘어감.
@@ -142,7 +172,11 @@ public class event{
 					if(index.area[3-i][k]==index.area[3-i+1][k]){//같으면 합산
 						index.area[3-i+1][k]*=2;
 						index.area[3-i][k]=0;
-					}}}
+					}
+					
+				}
+				
+			}
 			for(int i=1;i<index.area.length;i++){//모든 숫자를 0없이 밀착
 				for(int k=0;k<index.area.length;k++){
 					if(index.area[3-i][k]==0){//기준이 0이면 넘어감.
@@ -156,7 +190,10 @@ public class event{
 							l--;
 							if(l==0)
 								break;
-						}}}}
+						}
+					}
+				}
+			}
 		}
 		
 		for(int i=0;i<index.area.length;i++){
