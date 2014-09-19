@@ -158,6 +158,13 @@ public class event{
 								break;
 						}}}}
 		}
+		
+		for(int i=0;i<index.area.length;i++){
+		  for(int j=0;j<index.area.length;j++){
+		    if(index.score<index.area[i][j])
+		    index.score=index.area[i][j];
+		  }
+		}
 		endEvent.finalend();
 	}
 

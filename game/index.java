@@ -4,7 +4,7 @@ import field.fieldT;
 
 public class index {
 	public static int [][]area = new int[4][4];
-
+ public static int score=0;
 	public static void main(String[] args){
 		getNum.genNum(4);
 		getNum.genNum(4);

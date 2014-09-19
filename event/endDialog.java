@@ -1,18 +1,20 @@
 ﻿package event;
 
+import game.index;
 import java.awt.*;
 import java.awt.event.*;
 
 @SuppressWarnings("serial")
 public class endDialog extends Dialog implements ActionListener{
-	private String msgv, msgf;
+	private String msgg,msgv, msgf;
 	private Button b1;
 	Panel p1;
 	public endDialog(Frame fieldT, String msg) {
 		super(fieldT,msg,true);
-		msgv="승리하셨습니다!";
-		msgf="패배하셨습니다!";
-		b1= new Button("게임 종료");
+		msgv="Victory!!";
+		msgf=new String("Failed...");
+		msgg = "score: ";
+		b1= new Button("Game Over");
 		b1.addActionListener(this);
 	}
 	public void displayUI(){
@@ -25,20 +27,24 @@ public class endDialog extends Dialog implements ActionListener{
 
 		Label l1 = new Label(msgv);
 		Label l2 = new Label(msgf);
+		Label l3 = new Label(msgg+index.score);
 		l1.setAlignment(Label.CENTER);
 		l2.setAlignment(Label.CENTER);
+		l3.setAlignment(Label.CENTER);
 		
 		if(event.fin==1)
 			add("North", l1);
 		else 
 			add("North", l2);
+		add("Center", l3);
 		p1 = new Panel();
 		p1.setLayout(new FlowLayout());
 		p1.add(b1);
-		add(p1);
+		add("South",p1);
 		setLocation(xpos, ypos);
-		
+		setResizable(false);
 		setVisible(true);
+		
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
